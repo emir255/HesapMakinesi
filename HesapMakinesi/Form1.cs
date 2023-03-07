@@ -32,6 +32,10 @@ namespace HesapMakinesi
             {
                 textBox1.Text = "1";
             }
+            else if (textBox1.Text == "-0")
+            {
+                textBox1.Text = "-1";
+            }
             else
             {
                 textBox1.Text += "1";
@@ -43,6 +47,10 @@ namespace HesapMakinesi
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "2";
+            }
+            else if (textBox1.Text == "-0")
+            {
+                textBox1.Text = "-2";
             }
             else
             {
@@ -56,6 +64,10 @@ namespace HesapMakinesi
             {
                 textBox1.Text = "3";
             }
+            else if (textBox1.Text == "-0")
+            {
+                textBox1.Text = "-3";
+            }
             else
             {
                 textBox1.Text += "3";
@@ -67,6 +79,10 @@ namespace HesapMakinesi
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "4";
+            }
+            else if (textBox1.Text == "-0")
+            {
+                textBox1.Text = "-4";
             }
             else
             {
@@ -80,6 +96,10 @@ namespace HesapMakinesi
             {
                 textBox1.Text = "5";
             }
+            else if (textBox1.Text == "-0")
+            {
+                textBox1.Text = "-5";
+            }
             else
             {
                 textBox1.Text += "5";
@@ -91,6 +111,10 @@ namespace HesapMakinesi
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "6";
+            }
+            else if (textBox1.Text == "-0")
+            {
+                textBox1.Text = "-6";
             }
             else
             {
@@ -104,6 +128,10 @@ namespace HesapMakinesi
             {
                 textBox1.Text = "7";
             }
+            else if (textBox1.Text == "-0")
+            {
+                textBox1.Text = "-7";
+            }
             else
             {
                 textBox1.Text += "7";
@@ -116,6 +144,10 @@ namespace HesapMakinesi
             {
                 textBox1.Text = "8";
             }
+            else if (textBox1.Text == "-0")
+            {
+                textBox1.Text = "-8";
+            }
             else
             {
                 textBox1.Text += "8";
@@ -127,6 +159,10 @@ namespace HesapMakinesi
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "9";
+            }
+            else if (textBox1.Text == "-0")
+            {
+                textBox1.Text = "-9";
             }
             else
             {
@@ -439,6 +475,18 @@ namespace HesapMakinesi
             }  
         }
 
+        private void button19_Click(object sender, EventArgs e)
+        {
+            if (!textBox1.Text.Contains("-"))
+            {
+                textBox1.Text = "-" + textBox1.Text;
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text.Remove(0, 1);  
+            }
+        }
+
         private void button15_Click(object sender, EventArgs e)
         {
             if (islem == "+")
@@ -479,6 +527,10 @@ namespace HesapMakinesi
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "0";
+            }
+            else if (textBox1.Text == "-0")
+            {
+                textBox1.Text = "-0";
             }
             else
             {
