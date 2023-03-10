@@ -17,8 +17,8 @@ namespace HesapMakinesi
             InitializeComponent();
         }
 
-        double x, y;
-        string yazi,islem,teyitislem;
+        double y;
+        string islem;
 
         private void button10_Click(object sender, EventArgs e)
         {
@@ -237,23 +237,15 @@ namespace HesapMakinesi
             //yeni
             if (islem == "+")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text = textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y + Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "+" + textsayi + "=" + textBox1.Text);
                 label1.Text = textBox1.Text + "+";
-                //textBox1.Text = "0";
-
-
-
             }
             else if (islem == "-")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y - Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "-" + textsayi + "=" + textBox1.Text);
@@ -261,9 +253,7 @@ namespace HesapMakinesi
             }
             else if (islem == "*")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y * Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "*" + textsayi + "=" + textBox1.Text);
@@ -271,46 +261,21 @@ namespace HesapMakinesi
             }
             else if (islem == "/")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y / Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "/" + textsayi + "=" + textBox1.Text);
                 label1.Text = textBox1.Text + "+";
-
             }
             // yeni bitimi
 
-
-
-            islem = "+";
             if (label1.Text == "")
             {
-                label1.Text = "0";
-                yazi = label1.Text;
-                y = Convert.ToDouble(yazi);
-                label1.Text = Convert.ToString(y + Convert.ToDouble(textBox1.Text));
-                label1.Text = label1.Text + "+";
-
-            }
-            //else if (label1.Text != "0")
-            //{
-            //    yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-            //    y = Convert.ToDouble(yazi);
-            //    label1.Text = Convert.ToString(y + Convert.ToDouble(textBox1.Text));
-            //    label1.Text = label1.Text + "+";
-            //}
-            else
-            {
-                label1.Text = label1.Text.Remove(label1.Text.Length - 1, 1);
-
-                label1.Text = label1.Text + "+";
+                label1.Text = textBox1.Text + "+";
             }
 
             textBox1.Text = "0";
             islem = "+";
-
 
         }
 
@@ -326,23 +291,15 @@ namespace HesapMakinesi
             //yeni
             if (islem == "+")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text = textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y + Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "+" + textsayi + "=" + textBox1.Text);
                 label1.Text = textBox1.Text + "-";
-                //textBox1.Text = "0";
-
-
-
             }
             else if (islem == "-")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y - Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "-" + textsayi + "=" + textBox1.Text);
@@ -350,9 +307,7 @@ namespace HesapMakinesi
             }
             else if (islem == "*")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y * Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "*" + textsayi + "=" + textBox1.Text);
@@ -360,44 +315,18 @@ namespace HesapMakinesi
             }
             else if (islem == "/")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y / Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "/" + textsayi + "=" + textBox1.Text);
                 label1.Text = textBox1.Text + "-";
-
             }
             // yeni bitimi
 
             if (label1.Text == "")
             {
-
-
-
-                label1.Text = Convert.ToString(Convert.ToDouble(textBox1.Text));
-                label1.Text = label1.Text + "-";
-
+                label1.Text = textBox1.Text + "-";
             }
-
-
-            //else if (label1.Text != "0")
-            //{
-            //    yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-            //    y = Convert.ToDouble(yazi);
-            //    label1.Text = Convert.ToString(y - Convert.ToDouble(textBox1.Text));
-            //    label1.Text = label1.Text + "-";
-            //}
-
-            else
-            {
-                label1.Text = label1.Text.Remove(label1.Text.Length - 1, 1);
-
-                label1.Text = label1.Text + "-";
-            }
-            
-
 
             islem = "-";
             textBox1.Text = "0";
@@ -417,23 +346,15 @@ namespace HesapMakinesi
             //yeni
             if (islem == "+")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text = textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y + Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "+" + textsayi + "=" + textBox1.Text);
                 label1.Text = textBox1.Text + "*";
-                //textBox1.Text = "0";
-
-
-
             }
             else if (islem == "-")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y - Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "-" + textsayi + "=" + textBox1.Text);
@@ -441,9 +362,7 @@ namespace HesapMakinesi
             }
             else if (islem == "*")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y * Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "*" + textsayi + "=" + textBox1.Text);
@@ -451,43 +370,19 @@ namespace HesapMakinesi
             }
             else if (islem == "/")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y / Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "/" + textsayi + "=" + textBox1.Text);
                 label1.Text = textBox1.Text + "*";
-
             }
             // yeni bitimi
-
 
             
             if (label1.Text == "")
             {
-                label1.Text = "1";
-                yazi = label1.Text;
-                y = Convert.ToDouble(yazi);
-                label1.Text = Convert.ToString(y * Convert.ToDouble(textBox1.Text));
-                label1.Text = label1.Text + "*";
-
+                label1.Text = textBox1.Text + "*";
             }
-            //else if (label1.Text != "0")
-            //{
-            //    yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-            //    y = Convert.ToDouble(yazi);
-            //    label1.Text = Convert.ToString(y * Convert.ToDouble(textBox1.Text));
-            //    label1.Text = label1.Text + "*";
-            //}
-            else
-            {
-                label1.Text = label1.Text.Remove(label1.Text.Length - 1, 1);
-
-                label1.Text = label1.Text + "*";
-            }
-
-
 
             islem = "*";
             textBox1.Text = "0";
@@ -505,23 +400,15 @@ namespace HesapMakinesi
             //yeni
             if (islem == "+")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text = textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y + Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "+" + textsayi + "=" + textBox1.Text);
                 label1.Text = textBox1.Text + "/";
-                //textBox1.Text = "0";
-                
-                
-
             }
             else if (islem == "-")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y - Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "-" + textsayi + "=" + textBox1.Text);
@@ -529,9 +416,7 @@ namespace HesapMakinesi
             }
             else if (islem == "*")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y * Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "*" + textsayi + "=" + textBox1.Text);
@@ -539,46 +424,20 @@ namespace HesapMakinesi
             }
             else if (islem == "/")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
-                //label1.Text += textBox1.Text + "=";
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 string textsayi = textBox1.Text;
                 textBox1.Text = Convert.ToString(y / Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(y + "/" + textsayi + "=" + textBox1.Text);
                 label1.Text = textBox1.Text + "/";
-
             }
             // yeni bitimi
 
             
             if (label1.Text == "")
             {
-                
-                
-                
-                label1.Text = Convert.ToString(Convert.ToDouble(textBox1.Text));
-                label1.Text = label1.Text + "/";
-
+                label1.Text = textBox1.Text + "/";
             }
-            //else if (label1.Text != "0")
-            //{
-                
-            //    if (!(islem =="+" || islem == "-" || islem == "*" || islem == "/"))
-            //    {
-            //        yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-            //        y = Convert.ToDouble(yazi);
-            //        label1.Text = Convert.ToString(y / Convert.ToDouble(textBox1.Text));
-            //        label1.Text = label1.Text + "/";
-            //    }
-
-                
-            //}
-            else
-            {
-                label1.Text = label1.Text.Remove(label1.Text.Length - 1, 1);
-                
-                label1.Text = label1.Text + "/";
-            }
+            
             islem = "/";
             textBox1.Text = "0";
         }
@@ -629,8 +488,7 @@ namespace HesapMakinesi
         {
             if (islem == "+")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 label1.Text += textBox1.Text + "=";
                 textBox1.Text = Convert.ToString(y + Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(label1.Text + textBox1.Text);
@@ -638,30 +496,26 @@ namespace HesapMakinesi
             }
             else if (islem == "-")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 label1.Text += textBox1.Text + "=";
                 textBox1.Text = Convert.ToString(y - Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(label1.Text + textBox1.Text);
             }
             else if (islem == "*")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 label1.Text += textBox1.Text + "=";
                 textBox1.Text = Convert.ToString(y * Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(label1.Text + textBox1.Text);
             }
             else if (islem == "/")
             {
-                yazi = label1.Text.Remove(label1.Text.Length - 1, 1);
-                y = Convert.ToDouble(yazi);
+                y = Convert.ToDouble(label1.Text.Remove(label1.Text.Length - 1, 1));
                 label1.Text += textBox1.Text + "="; 
                 textBox1.Text = Convert.ToString(y / Convert.ToDouble(textBox1.Text));
                 listBox1.Items.Add(label1.Text + textBox1.Text);
-
             }
-            islem = "Shortingen Triloji Cortiii";
+            islem = "Öylesine Değer";
         }
 
         private void button16_Click(object sender, EventArgs e)
